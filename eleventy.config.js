@@ -15,8 +15,7 @@ module.exports = function (conf) {
   return {
     dir: {
       input: './src',
-      includes: './includes',
-      output: "docs"
+      includes: './includes'
     },
     htmlTemplateEngine: 'njk'
   }

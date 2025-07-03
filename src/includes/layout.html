@@ -1,34 +1,27 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>{{ pageTitle if pageTitle else 'Mariia Chernenko' }}</title>
-    <meta name="description" content="{{
+    <meta
+      name="description"
+      content="{{
       pageDesc if pageDesc else 'Visual artist'
-    }}">
+    }}" />
 
     <!-- <link rel="icon" type="image/png" href="/assets/favicon.png" /> -->
-    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <link rel="shortcut icon" href="./assets/favicon.ico" />
 
-    <link rel="stylesheet" href="/ids/colors.css" />
-    <link rel="stylesheet" href="/ids/normalize.css" />
-    <link rel="stylesheet" href="/ids/settings.css" />
-    <link rel="stylesheet" href="/ids/layout.css" />
-    <link rel="stylesheet" href="/ids/ids.css" />
-    <link rel="stylesheet" href="/ids/gallery.css" />
-    <link rel="stylesheet" href="/ids/navbar.css" />
-    <link rel="stylesheet" href="/delivery-reports.css">
+    <link rel="stylesheet" href="./ids/colors.css" />
+    <link rel="stylesheet" href="./ids/normalize.css" />
+    <link rel="stylesheet" href="./ids/settings.css" />
+    <link rel="stylesheet" href="./ids/layout.css" />
+    <link rel="stylesheet" href="./ids/ids.css" />
+    <link rel="stylesheet" href="./delivery-reports.css" />
   </head>
   <body class="ids">
-    {% include 'header.html' %}
-        
-    {% block content %}{% endblock %}    
-
-    {% include 'footer.html' %}
-
-    <script src="/assets/script.js" defer></script>
+    {% include 'header.html' %} {% block content %}{% endblock %} {% include 'footer.html' %}
   </body>
 </html>
