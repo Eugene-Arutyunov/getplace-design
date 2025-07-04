@@ -52,19 +52,27 @@ header {
     min-height: 18em;
     background-color: rgba(var(--ids__accent-RGB), 1);
 
+    padding: 1em;
+    overflow: hidden;
+
     @media (width < 767px) {
       width: 100%;
     }
   }
 }
 
-.cta-group {
+.slides {
+  position: relative;
+  & .slide {
+    position: absolute;
+  }
+}
 
+.cta-group {
   margin-top: 1em;
   display: flex;
   align-items: baseline;
   gap: 0.8em;
-
 
   & .cta-caption {
     opacity: 0.5;
@@ -130,7 +138,6 @@ header {
         letter-spacing: 0.05em;
         font-size: 0.65em;
       }
-
     }
   }
 }
@@ -177,7 +184,6 @@ header {
         height: 2em;
       }
     }
-
   }
 
   & .review {
@@ -225,14 +231,10 @@ header {
           letter-spacing: 0.05em;
           font-size: 0.65em;
         }
-
       }
     }
-
   }
 }
-
-
 
 .footer {
   margin-top: 10em;
@@ -246,12 +248,11 @@ header {
       width: 12em;
 
       & ul {
-
         & li {
           padding: 0;
 
           &::before {
-            content: '';
+            content: "";
           }
         }
       }
@@ -272,7 +273,7 @@ header {
         padding: 0;
 
         &::before {
-          content: '';
+          content: "";
         }
       }
     }
@@ -287,6 +288,5 @@ header {
     & img {
       filter: saturate(150%) hue-rotate(15deg);
     }
-
   }
 }

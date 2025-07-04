@@ -4,7 +4,7 @@
     text-decoration: underline;
     will-change: color;
     text-decoration-thickness: 1px;
-    text-underline-offset: 0.2em;
+    text-underline-offset: 0.25em;
     text-decoration-skip-ink: none;
     text-decoration-color: rgba(var(--ids__link-RGB), 0.2);
     transition: color 0.5s ease, text-decoration 0.5s ease;
@@ -21,8 +21,19 @@
     margin-bottom: calc(var(--ids__density) * 0.4em);
 
     &.loud {
-      font-size: 1.7em;
+      font-weight: 500;
+      font-size: 1.45em;
       line-height: 1.2;
+
+      @media (width < 767px) {
+        font-size: 1.15em;
+        font-weight: 600;
+      }
+    }
+
+    &.caption {
+      font-size: 0.8em;
+      opacity: 0.7;
     }
   }
 
@@ -48,6 +59,7 @@
       font-size: 2.4em;
       font-weight: 650;
     }
+
     &.XS {
       font-size: 1.5em;
       font-weight: 600;
@@ -109,7 +121,7 @@
 
     & li {
       position: relative;
-      margin-bottom: calc(var(--ids__density) * 0.5em);
+      margin-bottom: calc(var(--ids__density) * 0.4em);
     }
   }
 
@@ -148,10 +160,15 @@
     padding-right: calc(var(--ids__density) * 1.5em);
     padding-bottom: calc(var(--ids__density) * 0.4em);
     padding-left: calc(var(--ids__density) * 0.5em);
+
     border-radius: 0.2em;
 
     @media (width < 767px) {
       padding-right: calc(var(--ids__density) * 0.75em);
+    }
+
+    & a {
+      font-weight: 650;
     }
   }
 
@@ -174,10 +191,12 @@
     &.ids__figure__XXS {
       width: 25%;
     }
+
     &.XS,
     &.ids__figure__XS {
       width: 50%;
     }
+
     &.S,
     &.ids__figure__S {
       width: 75%;
@@ -202,8 +221,7 @@
   }
 
   & table {
-    & caption {
-    }
+    & caption {}
   }
 
   & hr {

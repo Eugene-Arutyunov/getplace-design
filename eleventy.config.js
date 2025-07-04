@@ -1,5 +1,7 @@
 module.exports = function (conf) {
-  conf.addPassthroughCopy('./src/delivery-reports.css')
+  conf.addPassthroughCopy('./src/styles/header.css')
+  conf.addPassthroughCopy('./src/styles/footer.css')
+  conf.addPassthroughCopy('./src/styles/delivery-reports.css')
   conf.addPassthroughCopy('./src/ids/colors.css')
   conf.addPassthroughCopy('./src/ids/normalize.css')
   conf.addPassthroughCopy('./src/ids/settings.css')

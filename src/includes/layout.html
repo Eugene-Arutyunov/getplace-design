@@ -4,12 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>{{ pageTitle if pageTitle else 'Mariia Chernenko' }}</title>
-    <meta
-      name="description"
-      content="{{
-      pageDesc if pageDesc else 'Visual artist'
-    }}" />
+    <title>{{ pageTitle if pageTitle else 'Getplace' }}</title>
+    <meta name="description" content="{{ pageDesc if pageDesc else 'Location Analytics Software'}}" />
 
     <!-- <link rel="icon" type="image/png" href="/assets/favicon.png" /> -->
     <link rel="shortcut icon" href="./assets/favicon.ico" />
@@ -19,9 +15,31 @@
     <link rel="stylesheet" href="./ids/settings.css" />
     <link rel="stylesheet" href="./ids/layout.css" />
     <link rel="stylesheet" href="./ids/ids.css" />
-    <link rel="stylesheet" href="./delivery-reports.css" />
+
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/delivery-reports.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
   </head>
   <body class="ids">
     {% include 'header.html' %} {% block content %}{% endblock %} {% include 'footer.html' %}
+
+    <script>
+      let observer = new IntersectionObserver(
+        (elements) => {
+          elements.forEach((el) => {
+            if (el.intersectionRatio > 0.3) {
+              el.target.classList.remove("sleeping");
+            } else {
+              el.target.classList.add("sleeping");
+            }
+          });
+        },
+        { threshold: [0, 0.5] }
+      );
+
+      document.querySelectorAll(".sleepy").forEach((el) => {
+        observer.observe(el);
+      });
+    </script>
   </body>
 </html>

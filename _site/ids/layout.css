@@ -4,12 +4,15 @@
   &.S {
     height: calc(var(--ids__density) * 0.7em);
   }
+
   &.M {
     height: calc(var(--ids__density) * 1.4em);
   }
+
   &.L {
     height: calc(var(--ids__density) * 2.4em);
   }
+
   &.XL {
     height: calc(var(--ids__density) * 4em);
   }
@@ -19,6 +22,7 @@
   position: relative;
   width: 70%;
   margin: 0 auto;
+  max-width: 1200px;
 
   @media (width < 767px) {
     width: 100%;
@@ -42,8 +46,9 @@
       padding: 0 calc(var(--ids__density) * 0.6em);
     }
   }
+
   &.XXL {
-    width: 100%;    
+    width: 100%;
 
     @media (width < 767px) {
       padding: 0;
